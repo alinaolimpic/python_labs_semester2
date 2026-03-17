@@ -7,7 +7,7 @@ def print_separator(part_name):
     print("=" * 60)
 
 def demonstrate_grade5():
-    # ========== ЧАСТЬ 1: СОЗДАНИЕ ОБЪЕКТОВ ==========
+    #ЧАСТЬ 1: СОЗДАНИЕ ОБЪЕКТОВ
     print_separator("ЧАСТЬ 1: СОЗДАНИЕ ОБЪЕКТОВ")
     
     print("\nСоздаем три автобуса:")
@@ -21,7 +21,7 @@ def demonstrate_grade5():
     print(f"\nАтрибут класса total_buses = {Bus.total_buses}")
     print(f"Тот же атрибут, но через экземпляр: {bus1.total_buses}")
     
-    # ========== ЧАСТЬ 2: ДЕМОНСТРАЦИЯ ВАЛИДАЦИИ ==========
+    # ЧАСТЬ 2: ДЕМОНСТРАЦИЯ ВАЛИДАЦИИ
     print_separator("ЧАСТЬ 2: ДЕМОНСТРАЦИЯ ВАЛИДАЦИИ")
     print("\nПытаемся создать автобус с некорректными данными:")
     test_cases = [
@@ -39,7 +39,7 @@ def demonstrate_grade5():
         except (TypeError, ValueError) as e:
             print(f" Ошибка перехвачена: {e}")
     
-    # ========== ЧАСТЬ 3: ДЕМОНСТРАЦИЯ СВОЙСТВ И СЕТТЕРОВ ==========
+    # ЧАСТЬ 3: ДЕМОНСТРАЦИЯ СВОЙСТВ И СЕТТЕРОВ
     print_separator("ЧАСТЬ 3: СВОЙСТВА И СЕТТЕРЫ")
     
     print(f"\nИсходный автобус: {bus1}")
@@ -63,7 +63,7 @@ def demonstrate_grade5():
     except ValueError as e:
         print(f"Ошибка: {e}")
     
-    # ========== ЧАСТЬ 4: БИЗНЕС-МЕТОДЫ И СОСТОЯНИЯ ==========
+    #ЧАСТЬ 4: БИЗНЕС-МЕТОДЫ И СОСТОЯНИЯ
     print_separator("ЧАСТЬ 4: БИЗНЕС-МЕТОДЫ И СОСТОЯНИЯ")
     
     print("\n--- СЦЕНАРИЙ 1: Обычный рабочий день ---")
@@ -140,7 +140,7 @@ def demonstrate_grade5():
     bus6.send_to_repair()
     print(bus6)
     
-    # ========== ЧАСТЬ 5: МАГИЧЕСКИЕ МЕТОДЫ ==========
+    # ЧАСТЬ 5: МАГИЧЕСКИЕ МЕТОДЫ
     print_separator("ЧАСТЬ 5: МАГИЧЕСКИЕ МЕТОДЫ")
     
     print("\n __str__ (для пользователя):")
@@ -168,7 +168,7 @@ def demonstrate_grade5():
     for b in buses:
         print(f"  Маршрут {b.route_number}: вместимость {b.capacity}")
     
-    # ========== ЧАСТЬ 6: ИТОГИ ==========
+    # ЧАСТЬ 6: ИТОГИ
     print_separator("Итоги")
     print(f"\n Статистика:")
     print(f"  Всего создано автобусов: {Bus.total_buses}")
