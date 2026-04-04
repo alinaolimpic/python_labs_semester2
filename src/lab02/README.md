@@ -63,56 +63,41 @@
 ### Сценарий 1: Создание и наполнение
 **Что происходит:** Создаются три автобуса (`Bus`) и добавляются в коллекцию `BusFleet`. Выводится список всех автобусов.
 
-![Сценарий 1](https://github.com/USERNAME/REPO_NAME/blob/main/images/image1.png)
+<img width="1413" height="274" alt="image" src= "https://github.com/alinaolimpic/python_labs_semester2/blob/d3ec5b43d2163baad1d42d1e0a7053b6bbe5120c/images/lab02.img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-04-04%20201448.png" />
+
+### Сценарий 2: Тест защиты (Дубликаты и Типы)
+**Что происходит:** Проверяется защита коллекции. Попытка добавить автобус с уже существующим `id`, а также объект другого типа вызывает ошибки (`ValueError` и `TypeError`).
+
+<img width="612" height="222" alt="image" src= "https://github.com/alinaolimpic/python_labs_semester2/blob/d3ec5b43d2163baad1d42d1e0a7053b6bbe5120c/images/lab02.img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-04-04%20201456.png" />
 
 ---
 
-### Сценарий 2: Магические методы
-**Что происходит:** Демонстрируется работа `len()` и итерации через цикл `for`.
+### Сценарий 3: Магические методы (__len__, __iter__)
+**Что происходит:** Демонстрируется работа функции `len()` и перебор коллекции с помощью цикла `for`.
 
-![Сценарий 2](https://github.com/USERNAME/REPO_NAME/blob/main/images/image2.png)
-
----
-
-### Сценарий 3: Индексация
-**Что происходит:** Получение первого автобуса через индекс `[0]`.
-
-![Сценарий 3](https://github.com/USERNAME/REPO_NAME/blob/main/images/image3.png)
+<img width="1341" height="203" alt="image" src= "https://github.com/alinaolimpic/python_labs_semester2/blob/d3ec5b43d2163baad1d42d1e0a7053b6bbe5120c/images/lab02.img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-04-04%20201504.png" />
 
 ---
 
-### Сценарий 4: Поиск
-**Что происходит:** Поиск автобуса по `id`.
+### Сценарий 4: Поиск и индексация (__getitem__)
+**Что происходит:** Получение элемента по индексу (`fleet[0]`) и поиск автобуса по `id`.
 
-![Сценарий 4](https://github.com/USERNAME/REPO_NAME/blob/main/images/image4.png)
+<img width="1654" height="137" alt="image" src= "https://github.com/alinaolimpic/python_labs_semester2/blob/d3ec5b43d2163baad1d42d1e0a7053b6bbe5120c/images/lab02.img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-04-04%20201520.png" />
 
----
-
-### Сценарий 5: Сортировка
-**Что происходит:** Список автобусов сортируется по вместимости.
-
-![Сценарий 5](https://github.com/USERNAME/REPO_NAME/blob/main/images/image5.png)
 
 ---
 
-### Сценарий 6: Фильтрация
-**Что происходит:** Один автобус выходит на маршрут, затем создаётся новая коллекция только с активными автобусами.
+### Сценарий 5: Сортировка и фильтрация
+**Что происходит:** Сначала выполняется сортировка автобусов по вместимости. Затем один автобус отправляется на маршрут, и создаётся новая коллекция только с активными автобусами.
 
-![Сценарий 6](https://github.com/USERNAME/REPO_NAME/blob/main/images/image6.png)
-
----
-
-### Сценарий 7: Удаление элементов
-**Что происходит:** Удаление автобуса по индексу с помощью `remove_at()`.
-
-![Сценарий 7](https://github.com/USERNAME/REPO_NAME/blob/main/images/image7.png)
+<img width="1467" height="365" alt="image" src= "https://github.com/alinaolimpic/python_labs_semester2/blob/d3ec5b43d2163baad1d42d1e0a7053b6bbe5120c/images/lab02.img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-04-04%20201527.png" />
 
 ---
 
-### Сценарий 8: Тест защиты (Дубликаты)
-**Что происходит:** Попытка добавить уже существующий автобус вызывает ошибку `ValueError`.
+### Сценарий 6: Удаление элементов
+**Что происходит:** Удаление автобуса по индексу с помощью метода `remove_at()`, после чего выводится обновлённое количество элементов.
 
-![Сценарий 8](https://github.com/USERNAME/REPO_NAME/blob/main/images/image8.png)
+<img width="517" height="189" alt="image" src= "https://github.com/alinaolimpic/python_labs_semester2/blob/d3ec5b43d2163baad1d42d1e0a7053b6bbe5120c/images/lab02.img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-04-04%20201531.png" />
 
 ---
 
