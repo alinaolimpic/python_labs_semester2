@@ -80,6 +80,7 @@ isinstance(object, classinfo) проверяет, является ли объе
 - Создаются объекты CityBus, TouristBus, ElectricBus.                 
 - Выполняется посадка пассажиров.                  
 - При ошибке перехватывается исключение ValueError.                 
+<img width="1714" height="597" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/cc449f88d3a03aa138f3828b11b42f4e8298a70e/images/lab03.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_1.png"/>
 
 ### Сценарий 2: Полиморфизм и проверка типов
 **Цель:** продемонстрировать полиморфное поведение методов и использование isinstance().                  
@@ -89,8 +90,7 @@ isinstance(object, classinfo) проверяет, является ли объе
 - Для каждого объекта вызывается один и тот же метод.                    
 - Результаты отличаются — это полиморфизм.                   
 
-![](/images/lab03/сценарий2.png)                  
-
+<img width="684" height="213" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/cc449f88d3a03aa138f3828b11b42f4e8298a70e/images/lab03.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_2.png"/>
 
 ### Сценарий 3: Коллекция разных типов                  
 **Цель:** показать, что коллекция BusCollection может хранить объекты всех дочерних классов и корректно с ними работать.                    
@@ -101,6 +101,7 @@ isinstance(object, classinfo) проверяет, является ли объе
 - Вывод всех объектов (итерация).                    
 - Фильтрация по типу (get_by_type).                  
 - Фильтрация активных объектов (get_active)
+<img width="1699" height="927" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/cc449f88d3a03aa138f3828b11b42f4e8298a70e/images/lab03.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_3.png"/>
 
 ## Вывод
 
