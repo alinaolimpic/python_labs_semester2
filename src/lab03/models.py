@@ -1,6 +1,7 @@
 from lab02.model import Bus
-
-
+#Переопределение методов — это механизм, при котором дочерний класс заменяет 
+#реализацию метода базового класса, сохраняя его интерфейс.
+#Полиморфизм = один интерфейс → разные реализации
 class CityBus(Bus):
     def __init__(self, route_number, capacity, speed, driver_name,
                  stops_count, ticket_price):
@@ -54,3 +55,4 @@ class ElectricBus(Bus):
 
     def __str__(self):
         return f"[Электробус] {super().__str__()} | батарея: {self.__battery_capacity}"
+    

@@ -28,7 +28,7 @@ class BusCollection:
     def get_by_type(self, cls):
         new = BusCollection()
         for bus in self._buses:
-            if type(bus) == cls:
+            if isinstance(bus, cls):
                 new.add(bus)
         return new
 
@@ -40,3 +40,4 @@ class BusCollection:
 
     def __str__(self):
         return "\n".join(str(b) for b in self._buses)
+    
