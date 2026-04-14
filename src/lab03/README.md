@@ -87,7 +87,7 @@ isinstance(object, classinfo) проверяет, является ли объе
 - Для каждого объекта вызывается один и тот же метод.                    
 - Результаты отличаются — это полиморфизм.                   
 
-<img width="684" height="213" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/cc449f88d3a03aa138f3828b11b42f4e8298a70e/images/lab03.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_2.png"/>
+<img width="584" height="306" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/ee327a0ee90701d7778daca618e74aa18909d4d4/images/lab03.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_2.png"/>
 
 ### Сценарий 3: Коллекция разных типов                  
 **Цель:** показать, что коллекция BusCollection может хранить объекты всех дочерних классов и корректно с ними работать.                    
