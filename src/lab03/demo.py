@@ -31,8 +31,9 @@ print("\n--- Полиморфизм и isinstance ---")
 print("bus2 является TouristBus:", isinstance(bus2, TouristBus))
 print("bus2 является CityBus:", isinstance(bus2, CityBus))
 
+print("\nПолиморфный вызов метода process():")
 for bus in [bus1, bus2, bus3]:
-    print(bus.process())  # один метод — разное поведение
+    print(bus.process())
 
 
 print("\n---Сценарий 3: Коллекция и работа с объектами---")

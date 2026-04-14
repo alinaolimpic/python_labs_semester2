@@ -50,7 +50,7 @@ class ElectricBus(Bus):
         return self.passenger_count * 20 + self.__eco_level * 10
 
     def process(self):
-        return f"Электробус: экорейтинг = {self.__eco_level}"
+        return f"Электробус: доход = {self.calculate_income()}, экорейтинг = {self.__eco_level}"
 
     def __str__(self):
         return f"[Электробус] {super().__str__()} | батарея: {self.__battery_capacity}"

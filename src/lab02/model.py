@@ -214,7 +214,12 @@ class Bus:
         print(f"  Было: {old_status.value}, стало: {BusStatus.ACCIDENT.value}")
         print(f"  Пострадало пассажиров: {injured}")
         return True
-    
+    # БАЗОВЫЙ МЕТОД ДЛЯ ПОЛИМОРФИЗМА
+    def process(self):
+        raise NotImplementedError("Метод должен быть реализован в дочернем классе")
+    def calculate_income(self):
+        raise NotImplementedError("Должен быть реализован")
+
     # МАГИЧЕСКИЕ МЕТОДЫ
     def __str__(self):
         return (f"Автобус #{self._id:03d} | "
@@ -241,5 +246,4 @@ class Bus:
         if not isinstance(other, Bus):
             return NotImplemented
         return self._capacity < other._capacity
-    
     
