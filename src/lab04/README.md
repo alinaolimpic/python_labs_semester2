@@ -71,7 +71,7 @@
 - рассчитывается доход для каждого объекта                
 - демонстрируется полиморфизм                
 
-<img width="1700" height="600" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/0125660960e2e251dbdc7b3d64ff4db3afd7498e/images/lab04.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_1.png"/>
+<img width="1756" height="777" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/0125660960e2e251dbdc7b3d64ff4db3afd7498e/images/lab04.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_1.png"/>
 
 ---
 
@@ -84,7 +84,7 @@
 - проверка реализации интерфейсов с помощью isinstance()                
 - сортировка объектов через интерфейс Comparable                
 
-<img width="1700" height="600" alt="image" src = "https://github.com/alinaolimpic/python_labs_semester2/blob/0125660960e2e251dbdc7b3d64ff4db3afd7498e/images/lab04.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_2.png"/>
+<img width="527" height="475" alt="image" src = "https://github.com/alinaolimpic/python_labs_semester2/blob/0125660960e2e251dbdc7b3d64ff4db3afd7498e/images/lab04.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_2.png"/>
 
 ---
 
@@ -98,7 +98,7 @@
 - выполняется фильтрация объектов                
 - демонстрируется работа с общей коллекцией                
 
-<img width="1700" height="800" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/0125660960e2e251dbdc7b3d64ff4db3afd7498e/images/lab04.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_3.png"/>
+<img width="1766" height="756" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/0125660960e2e251dbdc7b3d64ff4db3afd7498e/images/lab04.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_3.png"/>
 
 ---
 
