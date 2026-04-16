@@ -1,5 +1,5 @@
 # model.py
-from validate import *
+from lab01.validate import *
 class Bus:
     # Атрибуты класса
     total_buses = 0

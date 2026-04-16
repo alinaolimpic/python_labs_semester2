@@ -61,3 +61,4 @@ for b in collection.get_active():
 print("\nДоход (переопределение методов):")
 for b in collection:
     print(b.calculate_income())
+
