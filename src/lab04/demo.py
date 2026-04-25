@@ -8,9 +8,8 @@ def print_all(items: list[Printable]):
     for item in items:
         print(item.to_string())
 
-
 def sort_buses(items: list[Comparable]):
-    return sorted(items, key=lambda x: x.compare_to(items[0]))
+    return sorted(items, key=lambda x: x.calculate_income())
 
 
 def run_demo():
