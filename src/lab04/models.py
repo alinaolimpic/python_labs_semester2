@@ -1,7 +1,5 @@
 from lab02.model import Bus
 from lab04.interfaces import Printable, Comparable
-
-
 class CityBus(Bus, Printable, Comparable):
     def __init__(self, route_number, capacity, speed, driver_name,
                  stops_count, ticket_price):
