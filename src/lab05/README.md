@@ -83,7 +83,7 @@
 - применение функции к каждому элементу
 - вывод результата после каждого этапа
 
-<img width="1766" height="756" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/277da57b62e07ff65cd2ebc99bed22096941e3b8/images/lab05.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_1.png"/>
+![Сценарий 1](/images/lab05.img/scenariy01.png)
 
 ---
 
@@ -97,7 +97,8 @@
 - код коллекции не изменяется
 - результат меняется за счёт переданной функции
 
-<img width="1766" height="756" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/277da57b62e07ff65cd2ebc99bed22096941e3b8/images/lab05.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_2.png"/>
+![Сценарий 2](/images/lab05.img/scenariy02.png)
+
 
 ---
 
@@ -110,7 +111,8 @@
 - использование map
 - использование фабрики функций
 
-<img width="1766" height="756" alt="image" src="https://github.com/alinaolimpic/python_labs_semester2/blob/277da57b62e07ff65cd2ebc99bed22096941e3b8/images/lab05.img/%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9_3.png"/>
+![Сценарий 3](/images/lab05.img/scenariy03.png)
+
 
 ---
 
