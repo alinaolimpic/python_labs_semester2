@@ -55,16 +55,17 @@ def make_speed_filter(max_speed):
 # ===== APPLY ФУНКЦИИ =====
 
 def increase_speed(bus):
-    """Увеличить скорость"""
-    bus.speed += 5
-    return bus
+    from copy import deepcopy
 
+    new_bus = deepcopy(bus)
+    new_bus.speed += 5
+    return new_bus
 
 def start_route(bus):
     """Запуск маршрута"""
     try:
         bus.start_route()
-    except:
+    except Exception:
         pass
     return bus
 

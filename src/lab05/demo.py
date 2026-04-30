@@ -3,6 +3,7 @@ from lab05.collection05 import AdvancedBusCollection
 import lab05.strategies as st
 
 
+
 def print_all(title, collection):
     print(f"\n--- {title} ---")
     for b in collection:
@@ -12,7 +13,6 @@ def print_all(title, collection):
 def create_collection():
     """Создание коллекции (используется в каждом сценарии)"""
     c = AdvancedBusCollection()
-
     b1 = CityBus("10", 50, 60, "Иванов", 20, 50)
     b2 = TouristBus("20", 30, 80, "Петров", "Анна", 200)
     b3 = ElectricBus("30", 45, 55, "Сидоров", 300, 5)
@@ -75,6 +75,7 @@ def scenario_3():
     print("Callable-объект как стратегия + map + фабрика")
 
     c = create_collection()
+    fast = list(filter(st.is_fast, c))
     print_all("Исходная коллекция", c)
 
     # CALLABLE стратегия
