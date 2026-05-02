@@ -25,12 +25,11 @@ def create_collection():
     return c
 
 
-# =========================
 # СЦЕНАРИЙ 1
-# =========================
+
 def scenario_1():
-    print("\n================ СЦЕНАРИЙ 1 =================")
-    print("Цепочка: filter → sort → apply")
+    print("\n------- СЦЕНАРИЙ 1 -------")
+    print("Цепочка: filter → sort → apply") 
 
     c = create_collection()
     print_all("Исходная коллекция", c)
@@ -48,11 +47,9 @@ def scenario_1():
     print_all("После apply (увеличение скорости)", applied)
 
 
-# =========================
 # СЦЕНАРИЙ 2
-# =========================
 def scenario_2():
-    print("\n================ СЦЕНАРИЙ 2 =================")
+    print("\n--------СЦЕНАРИЙ 2 ----------")
     print("Замена стратегии сортировки")
 
     c = create_collection()
@@ -62,40 +59,50 @@ def scenario_2():
     sorted_by_capacity = c.sort_by(st.by_capacity)
     print_all("Сортировка по вместимости", sorted_by_capacity)
 
-    # стратегия 2 (другая функция)
+    # стратегия 2 
     sorted_by_driver = c.sort_by(st.by_driver)
     print_all("Сортировка по имени водителя", sorted_by_driver)
 
+    # стратегия 3 
+    sorted_by_speed = c.sort_by(st.by_speed)
+    print_all("Сортировка по скорости", sorted_by_speed)
 
-# =========================
 # СЦЕНАРИЙ 3
-# =========================
 def scenario_3():
-    print("\n================ СЦЕНАРИЙ 3 =================")
+    print("\n-------- СЦЕНАРИЙ 3 --------")
     print("Callable-объект как стратегия + map + фабрика")
 
     c = create_collection()
-    fast = list(filter(st.is_fast, c))
+    fast = list(filter(st.is_fast, c)) 
     print_all("Исходная коллекция", c)
 
-    # CALLABLE стратегия
+    # CALLABLE
+
+    # стратегия 1
     strategy = st.UpgradeStrategy()
     upgraded = c.apply(strategy)
     print_all("После применения callable стратегии (апгрейд)", upgraded)
 
-    # MAP
-    names = c.map(lambda x: x.driver_name)
+    # стратегия 2
+    strategy2 = st.DiscountSpeedStrategy()
+    discounted = c.apply(strategy2)
+    print_all("После применения callable стратегии (уменьшение скорости)", discounted)
+
+
+
+    # MAP 
+    names = c.map(lambda x: x.driver_name) 
     print("\nРезультат map (имена водителей):", names)
 
-    # ФАБРИКА
+    # ФАБРИКА demo 4
     slow_filter = st.make_speed_filter(65)
     slow_buses = c.filter_by(slow_filter)
     print_all("Фильтр через фабрику (скорость <= 65)", slow_buses)
 
 
-# =========================
-# MAIN
-# =========================
+
+#------MAIN------
+
 def main():
     scenario_1()
     scenario_2()
