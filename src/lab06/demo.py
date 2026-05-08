@@ -9,9 +9,8 @@ def create_buses():
     return [b1, b2, b3]
 
 
-# =====================
 # СЦЕНАРИЙ 1 (типизация)
-# =====================
+
 def scenario_1():
     print("\n--- Сценарий 1 ---")
 
@@ -26,9 +25,9 @@ def scenario_1():
         print(b)
 
 
-# =====================
+
 # СЦЕНАРИЙ 2 (find/filter/map)
-# =====================
+
 def scenario_2():
     print("\n--- Сценарий 2 ---")
 
@@ -56,9 +55,9 @@ def scenario_2():
     print("Скорости:", speeds)
 
 
-# =====================
+
 # СЦЕНАРИЙ 3 (Protocol)
-# =====================
+
 def scenario_3():
     print("\n--- Сценарий 3 ---")
 
@@ -80,9 +79,8 @@ def scenario_3():
     print("Scores:", sc.get_scores())
 
 
-# =====================
+
 # MAIN
-# =====================
 def main():
     scenario_1()
     scenario_2()
