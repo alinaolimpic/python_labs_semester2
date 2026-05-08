@@ -11,7 +11,7 @@ def print_all(title, collection):
 
 
 def create_collection():
-    """Создание коллекции (используется в каждом сценарии)"""
+    """Создание коллекции"""
     c = AdvancedBusCollection()
     b1 = CityBus("10", 50, 60, "Иванов", 20, 50)
     b2 = TouristBus("20", 30, 80, "Петров", "Анна", 200)
@@ -48,6 +48,7 @@ def scenario_1():
 
 
 # СЦЕНАРИЙ 2
+
 def scenario_2():
     print("\n--------СЦЕНАРИЙ 2 ----------")
     print("Замена стратегии сортировки")

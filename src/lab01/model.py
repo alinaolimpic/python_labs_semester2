@@ -1,11 +1,12 @@
 # model.py
-from lab01.validate import *
+from .validate import *
+from typing import Optional
 class Bus:
     # Атрибуты класса
-    total_buses = 0
-    total_passengers_transported = 0
+    total_buses: int = 0
+    total_passengers_transported: int = 0
     
-    def __init__(self, route_number, capacity, speed, driver_name):
+    def __init__(self, route_number:str, capacity: int, speed: float, driver_name:str)-> None:
         """
         Конструктор класса Bus
         Параметры:
@@ -15,57 +16,57 @@ class Bus:
             driver_name: имя водителя (str)
         """
         # Валидация через имп фун-ии из validate.py
-        self._route_number = val_route_number(route_number)
-        self._capacity = val_capacity(capacity)
-        self._speed = val_speed(speed)
-        self._driver_name = val_driver_name(driver_name)
+        self._route_number: str = val_route_number(route_number)
+        self._capacity: int = val_capacity(capacity)
+        self._speed: float = val_speed(speed)
+        self._driver_name: str = val_driver_name(driver_name)
         
         # Инициализация остальных атрибутов
-        self._passenger_count = 0
+        self._passenger_count: int = 0
         self._status = BusStatus.IN_PARK
-        self._mileage = 0.0
-        self._fuel_level = 100.0
+        self._mileage: float = 0.0
+        self._fuel_level: float = 100.0
         
         Bus.total_buses += 1
-        self._id = Bus.total_buses
+        self._id: int = Bus.total_buses
         print(f"Создан автобус #{self._id}: маршрут {self._route_number}")
     
     # СВОЙСТВА
     @property
-    def route_number(self):
+    def route_number(self)-> str:
         return self._route_number
     @property
-    def capacity(self):
+    def capacity(self)-> int:
         return self._capacity
     @property
-    def speed(self):
+    def speed(self)-> float:
         return self._speed
     @property
-    def driver_name(self):
+    def driver_name(self)-> str:
         return self._driver_name
     
     @driver_name.setter
-    def driver_name(self, new_name):
+    def driver_name(self, new_name: str)-> None:
         old_name = self._driver_name
         self._driver_name = val_driver_name(new_name)
         print(f"Водитель автобуса #{self._id} изменен: {old_name} -> {self._driver_name}")
     @property
-    def passenger_count(self):
+    def passenger_count(self)-> int:
         return self._passenger_count  
     @property
     def status(self):
         return self._status.value 
     @property
-    def fuel_level(self):
+    def fuel_level(self)-> float:
         return self._fuel_level
     @property
-    def mileage(self):
+    def mileage(self)-> float:
         return self._mileage
     @property
-    def id(self):
+    def id(self)-> int:
         return self._id
     @speed.setter
-    def speed(self, new_speed):
+    def speed(self, new_speed:float)-> None:
         if self._status == BusStatus.REPAIR:
             raise ValueError("Нельзя изменить скорость автобуса в ремонте")
         if self._status == BusStatus.ACCIDENT:
@@ -75,7 +76,7 @@ class Bus:
 
 
     # БИЗНЕС-МЕТОД 1: Посадка пассажиров
-    def board_passengers(self, count):
+    def board_passengers(self, count:int)-> dict:
         print(f"\nПосадка в автобус #{self._id} ({self._passenger_count}/{self._capacity} пассажиров)")
         
         try:
@@ -116,7 +117,7 @@ class Bus:
         }
     
     # БИЗНЕС-МЕТОД 2: Высадка пассажиров
-    def disembark_passengers(self, count=None):
+    def disembark_passengers(self, count: Optional[int] =None)-> dict:
         if count is None:
             count = self._passenger_count
         
@@ -138,7 +139,7 @@ class Bus:
         }
     
     # БИЗНЕС-МЕТОД 3: Выезд на маршрут
-    def start_route(self):
+    def start_route(self)-> bool:
         print(f"\nПопытка выезда автобуса #{self._id} на маршрут {self._route_number}")
         
         if self._status != BusStatus.IN_PARK:
@@ -153,7 +154,7 @@ class Bus:
         return True
     
     # БИЗНЕС-МЕТОД 4: Завершение маршрута
-    def finish_route(self):
+    def finish_route(self)-> bool:
         if self._status != BusStatus.ON_ROUTE:
             raise ValueError(f"Автобус не на маршруте (статус: {self._status.value})")
         
@@ -176,7 +177,7 @@ class Bus:
         return True
     
     # БИЗНЕС-МЕТОД 5: Ремонт
-    def send_to_repair(self):
+    def send_to_repair(self)-> bool:
         if self._status == BusStatus.REPAIR:
             raise ValueError("Автобус уже в ремонте")
         
@@ -185,7 +186,7 @@ class Bus:
         print(f"\n Автобус #{self._id} отправлен в ремонт (был: {old_status.value})")
         return True
     
-    def complete_repair(self):
+    def complete_repair(self)-> bool:
         if self._status != BusStatus.REPAIR:
             raise ValueError("Автобус не в ремонте")
         
@@ -198,7 +199,7 @@ class Bus:
         return True
     
     # БИЗНЕС-МЕТОД 6: Авария
-    def accident(self):
+    def accident(self)-> bool:
         if self._status == BusStatus.REPAIR:
             raise ValueError("Автобус в ремонте")
         if self._status == BusStatus.ACCIDENT:
@@ -214,9 +215,14 @@ class Bus:
         print(f"  Было: {old_status.value}, стало: {BusStatus.ACCIDENT.value}")
         print(f"  Пострадало пассажиров: {injured}")
         return True
-    
+    # БАЗОВЫЙ МЕТОД ДЛЯ ПОЛИМОРФИЗМА
+    def process(self)-> str:
+        raise NotImplementedError("Метод должен быть реализован в дочернем классе")
+    def calculate_income(self)-> float:
+        raise NotImplementedError("Должен быть реализован")
+
     # МАГИЧЕСКИЕ МЕТОДЫ
-    def __str__(self):
+    def __str__(self)-> str:
         return (f"Автобус #{self._id:03d} | "
                 f"Маршрут: {self._route_number:<5} | "
                 f"Водитель: {self._driver_name:<15} | "
@@ -225,19 +231,25 @@ class Bus:
                 f"Топливо: {self._fuel_level:5.1f}% | "
                 f"Пробег: {self._mileage:6.1f} км")
     
-    def __repr__(self):
+    def __repr__(self)-> str:
         return (f"Bus(route_number='{self._route_number}', "
                 f"capacity={self._capacity}, "
                 f"speed={self._speed}, "
                 f"driver_name='{self._driver_name}')")
     
-    def __eq__(self, other):
+    def __eq__(self, other:object)-> bool:
         if not isinstance(other, Bus):
             return False
         return (self._route_number == other._route_number and 
                 self._driver_name == other._driver_name)
     
-    def __lt__(self, other):
+    def __lt__(self, other)-> bool:
         if not isinstance(other, Bus):
             return NotImplemented
         return self._capacity < other._capacity
+    
+    def display(self) -> str:
+        return str(self)
+
+    def score(self) -> float:
+        return float(self._capacity)

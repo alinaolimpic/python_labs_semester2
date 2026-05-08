@@ -1,9 +1,6 @@
-"""
-strategies.py
-Функции-стратегии и callable-объекты для работы с автобусами
-"""
+#Функции-стратегии и callable-объекты для работы с автобусами
 
-# ===== СОРТИРОВКА =====
+#-----СОРТИРОВКА----
 
 def by_capacity(bus):
     """Сортировка по вместимости"""
@@ -25,7 +22,7 @@ def by_capacity_and_speed(bus):
     return (bus.capacity, bus.speed)
 
 
-# ===== ФИЛЬТРЫ =====
+# ------ФИЛЬТРЫ------
 
 def is_fast(bus):
     """Быстрые автобусы (> 60)"""
@@ -35,7 +32,7 @@ def is_fast(bus):
 def is_large(bus):
     """Большая вместимость (> 40)"""
     return bus.capacity > 40
-
+  
 
 def is_city_bus(bus):
     """Фильтр по типу"""
@@ -43,7 +40,7 @@ def is_city_bus(bus):
     return isinstance(bus, CityBus)
 
 
-# ===== ФАБРИКА ФУНКЦИЙ =====
+#-------ФАБРИКА ФУНКЦИЙ ----- 
 
 def make_speed_filter(max_speed):
     """Фабрика фильтров по скорости"""
@@ -52,11 +49,11 @@ def make_speed_filter(max_speed):
     return filter_fn
 
 
-# ===== APPLY ФУНКЦИИ =====
-
+# ------APPLY ФУНКЦИИ ----- 
+ 
 def increase_speed(bus):
     from copy import deepcopy
-
+    """Увеличивает скорость автобуса на 5 (создаёт копию объекта)"""
     new_bus = deepcopy(bus)
     new_bus.speed += 5
     return new_bus
@@ -70,7 +67,7 @@ def start_route(bus):
     return bus
 
 
-# ===== СТРАТЕГИИ (CALLABLE) =====
+# ------ СТРАТЕГИИ (CALLABLE) ----- 
 
 class DiscountSpeedStrategy:
     """Стратегия уменьшения скорости (например, износ)"""

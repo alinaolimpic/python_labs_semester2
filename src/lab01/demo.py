@@ -1,4 +1,4 @@
-from model import Bus
+from .model import Bus
 import time
 
 def print_separator(scenario_name):
