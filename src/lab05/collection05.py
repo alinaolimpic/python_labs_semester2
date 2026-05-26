@@ -1,7 +1,5 @@
 # lab05/collection.py
 from lab02.collection import BusFleet
-
-
 class AdvancedBusCollection(BusFleet):
 
     # ---SORT BY (универсальный)---- 
@@ -35,3 +33,10 @@ class AdvancedBusCollection(BusFleet):
     #-----ПЕЧАТЬ------
     def __str__(self):
         return "\n".join(str(x) for x in self._items)
+    
+    
+    def find_by_id(self, bus_id):
+        for item in self._items:
+            if item.id == bus_id:
+                return item
+        return None

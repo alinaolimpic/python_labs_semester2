@@ -1,0 +1,29 @@
+[
+    {
+        "type": "TouristBus",
+        "route_number": "54",
+        "capacity": 22,
+        "speed": 66.0,
+        "driver_name": "Степан Владимирович",
+        "guide_name": "Алёна",
+        "tour_price": 1000.0
+    },
+    {
+        "type": "CityBus",
+        "route_number": "2",
+        "capacity": 44,
+        "speed": 68.0,
+        "driver_name": "Patric",
+        "stops_count": 20,
+        "ticket_price": 55.0
+    },
+    {
+        "type": "ElectricBus",
+        "route_number": "4F",
+        "capacity": 55,
+        "speed": 90.0,
+        "driver_name": "Юрий",
+        "battery_capacity": 100,
+        "eco_level": 5
+    }
+]

@@ -23,6 +23,17 @@ class CityBus(Bus):
 
     def score(self) -> float:
         return float(self.speed)
+    
+
+    def to_string(self) -> str:
+        return str(self)
+
+    def compare_to(self, other) -> int:
+        if self.calculate_income() < other.calculate_income():
+            return -1
+        elif self.calculate_income() > other.calculate_income():
+            return 1
+        return 0
 
 class TouristBus(Bus):
     def __init__(self, route_number: str, capacity: int, speed: float, driver_name: str, guide_name: str, tour_price: float) -> None:
@@ -45,6 +56,17 @@ class TouristBus(Bus):
     def score(self) -> float:
         return float(self.speed)
 
+
+    def to_string(self) -> str:
+        return str(self)
+
+    def compare_to(self, other) -> int:
+        if self.calculate_income() < other.calculate_income():
+            return -1
+        elif self.calculate_income() > other.calculate_income():
+            return 1
+        return 0
+    
 class ElectricBus(Bus):
     def __init__( self,route_number: str, capacity: int, speed: float, driver_name: str, battery_capacity: int, eco_level: int) -> None: 
         super().__init__(route_number, capacity, speed, driver_name)
@@ -66,7 +88,17 @@ class ElectricBus(Bus):
 
     def score(self) -> float:
         return float(self.speed)
+    
+    
+    def to_string(self) -> str:
+        return str(self)
 
+    def compare_to(self, other) -> int:
+        if self.calculate_income() < other.calculate_income():
+            return -1
+        elif self.calculate_income() > other.calculate_income():
+            return 1
+        return 0
 #citybus process(доход) = число пассажиров * цена билета
 #touristbus pricess(доход) = число пассажиров* цена тура
 #electricbus process(доход) = число пассажиров * 20+ ecobonus

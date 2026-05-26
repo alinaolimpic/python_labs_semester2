@@ -37,7 +37,6 @@ class TypedCollection(Generic[T]):
     def get_all(self) -> list[T]:
         return list(self._items)
 
-   
 
     def find(self, predicate: Callable[[T], bool]) -> Optional[T]:
         for item in self._items:

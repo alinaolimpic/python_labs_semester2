@@ -18,9 +18,7 @@ def scenario_1():
 
     bus = CityBus("10", 50, 60, "Иванов", 20, 50)
     c.add(bus)
-
     # c.add("not a bus")  #  покажет ошибку типов
-
     for b in c.get_all():
         print(b)
 
@@ -39,6 +37,7 @@ def scenario_2():
     # find
     found = c.find(lambda x: x.speed > 70)
     print("Найден:", found)
+
 
     not_found = c.find(lambda x: x.speed > 200)
     print("Не найден:", not_found)
