@@ -17,7 +17,6 @@ class BusApp:
 
     def _load(self) -> None:
         """Автозагрузка данных."""
-
         buses = load_buses()
 
         for bus in buses:
@@ -39,12 +38,14 @@ class BusApp:
     ) -> None:
         """Добавление городского автобуса."""
 
+
         for bus in self.collection:
             if bus.route_number == route and bus.driver_name == driver:
                 raise DuplicateBusError("Автобус уже существует")
 
         bus = CityBus(route, capacity, speed, driver, stops, price)
         self.collection.add(bus)
+
 
     def add_tourist_bus(
         self,
@@ -110,5 +111,5 @@ class BusApp:
 
     def sort_by_driver(self) -> list[Bus]:
         """Сортировка по водителю."""
-
+        
         return self.collection.sort_by(lambda b: b.driver_name).get_all()
